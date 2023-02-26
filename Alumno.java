@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Alumno {
 	String nombre, apellido,materia;
     int matricula;
+	public Object getMatricula;
 	
 	public Alumno(String n, String a, String c,int m) {
 		nombre = n;
@@ -29,6 +30,14 @@ public class Alumno {
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(this.matricula,this.nombre,this.apellido);
+		return Objects.hash(this.matricula,this.nombre,this.apellido,this.materia);
+	}
+
+	public void setMatricula(int matricula) {
+		this.matricula = matricula;
+	}
+
+	public int getMatricula() {
+		return matricula;
 	}
 }
